@@ -12,9 +12,10 @@
 #     Find the next triangle number that is also pentagonal and hexagonal.
 
 from math import floor, sqrt
+from typing import Tuple
 
 
-def pentagonal_index(x):
+def pentagonal_index(x: int) -> int:
     """
     Returns `i` such that pentagonal number P_i equals `x`, if such `i` exists.
     If `x` not pentagonal, return -1.
@@ -41,7 +42,7 @@ def pentagonal_index(x):
     return int(i) if floor(i) == i else -1
 
 
-def hexagonal_index(x):
+def hexagonal_index(x: int) -> int:
     """
     Returns `i` such that hexagonal number H_i equals `x`, if such `i` exists.
     If `x` not hexagonal, return -1.
@@ -68,12 +69,12 @@ def hexagonal_index(x):
     return int(i) if floor(i) == i else -1
 
 
-def main():
+def main() -> Tuple[int, int, int, int]:
     """
     Returns the next number after 40,755 which is triangular, pentagonal, and hexagonal.
 
     Returns:
-        (int): Next largest triangular/pentagonal/hexagonal number after 40,755
+        (Tuple[int, int, int, int]): Next largest triangular/pentagonal/hexagonal number after 40,755
     """
     i = 285
     x = 40755
